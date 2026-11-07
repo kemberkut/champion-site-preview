@@ -1,0 +1,5 @@
+/* About-only assembly. Visual roles and UI icons come from the canonical UI-KIT. */
+#brand-origin.ch-about-story-square>.ch-story-media{aspect-ratio:1}
+#brand-value .ch-about-numbered-list{gap:var(--ch-space-7);justify-content:space-between}
+#brand-value .ch-about-numbered-row{display:grid;grid-template-columns:var(--ch-space-7) minmax(0,1fr);gap:var(--ch-space-5);padding:0;background:transparent;border-radius:0}
+#brand-value .ch-about-number{display:block;flex:none;color:var(--ch-step-ink);font-family:var(--ch-font-text);font-size:var(--ch-size-body);line-height:var(--ch-line-body);font-weight:var(--ch-weight-text)}

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "Science-Gothic.ttf",
+    "family": "Science Gothic Light",
+    "style": "Regular"
+  },
+  {
+    "file": "Geist-Regular.ttf",
+    "family": "Geist",
+    "style": "Regular"
+  },
+  {
+    "file": "Geist-Semibold.ttf",
+    "family": "Geist SemiBold",
+    "style": "Regular"
+  },
+  {
+    "file": "Geist-Bold.ttf",
+    "family": "Geist",
+    "style": "Bold"
+  }
+]

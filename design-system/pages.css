@@ -1,0 +1,39 @@
+/* Page assembly only. All visual roles are defined by the approved UI KIT. */
+html,body{margin:0;background:#fff}
+.ch .ch-page{max-width:calc(var(--ch-container) + 2 * var(--ch-space-6));margin-inline:auto}
+.ch-page{padding:var(--ch-space-8) var(--ch-space-6);}
+.ch-page-section+.ch-page-section{margin-top:var(--ch-section-gap)}
+.ch-flow{display:flex;flex-direction:column;gap:var(--ch-space-4);min-width:0}
+.ch-copy{max-width:var(--ch-copy-width);margin-inline:auto;display:flex;flex-direction:column;gap:var(--ch-space-4)}
+.ch-form-shell{max-width:760px;margin-inline:auto}
+.ch-form{display:flex;flex-direction:column;gap:var(--ch-space-6)}
+.ch-section-content>.ch-grid+.ch-wide-placeholder{margin-top:var(--ch-heading-to-content)}
+.ch-section-content>.ch-actions:last-child{margin-top:var(--ch-heading-to-content)}
+.ch-section-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:var(--ch-space-4);margin-block:var(--ch-space-6)}
+.ch-wide-placeholder{border-radius:var(--ch-radius-card);width:100%;aspect-ratio:2.12;margin-block:var(--ch-space-6)}
+.ch-list{margin:0;padding-left:var(--ch-space-5);line-height:var(--ch-line-body)}
+.ch-card-body>p,.ch-step>p{margin:0}
+.ch-card-body h3 a{text-decoration:none}
+.ch-table-wrap{max-width:100%}
+.ch-table{min-width:560px}
+.ch-page :is(input,textarea,select){font-family:var(--ch-font-text)}
+.ch-index{display:flex;flex-direction:column;gap:var(--ch-section-gap)}
+@media(max-width:700px){.ch-page{padding:var(--ch-space-6) var(--ch-space-4)}.ch-hero .ch-heading .ch-lead{max-width:100%}.ch-wide-placeholder{aspect-ratio:1.5}}
+
+/* Case shelf: the existing UI KIT case card, four slots, native horizontal scrolling. */
+.ch-case-shelf{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 3 * var(--ch-grid-gap)) / 4);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding-bottom:var(--ch-space-4)}
+.ch-case-shelf>.ch-case{scroll-snap-align:start}
+@media(max-width:1000px){.ch-case-shelf.ch-grid--4{grid-template-columns:none;grid-auto-columns:calc((100% - var(--ch-grid-gap)) / 2)}}
+
+/* Page heroes sit outside the 1110px content wrapper, as in heroes.html. */
+.ch-site-main{width:100%;margin:0}
+.ch-page--after-hero{padding-top:var(--ch-section-gap)}
+
+/* Preserve each original section's internal grouping and media positions. */
+.ch-section-body{display:flex;flex-direction:column;gap:var(--ch-heading-to-content)}
+.ch-page-section>.ch-heading+.ch-section-body{margin-top:var(--ch-heading-to-content)}
+.ch-page-prelude{padding-block:var(--ch-space-6)}
+.ch-page-prelude>.ch-tabs:last-child{margin-bottom:0}
+.ch-section-body .ch-section-body{gap:var(--ch-space-6)}
+.ch-card-body>.ch-flow{width:100%}
+.ch-card-body>.ch-flow:last-child{margin-top:auto}

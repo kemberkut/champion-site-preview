@@ -1,0 +1,31 @@
+/* Shared page viewer. Storefront layouts keep their own isolated styles. */
+html{height:100%}
+body.ch-preview{margin:0;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.ch-preview-bar{flex:none;position:relative;z-index:1;background:var(--ch-surface);border-bottom:1px solid var(--ch-border)}
+.ch-preview-toolbar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:var(--ch-space-6);padding:var(--ch-space-3) var(--ch-space-6)}
+.ch-preview-brand{display:block;flex:none;text-decoration:none}
+.ch-preview .ch-preview-brand img{display:block;width:166px;height:auto}
+.ch-preview-picker{display:flex;align-items:center;gap:var(--ch-space-3);min-width:0;max-width:600px}
+.ch-preview-picker>span{flex:none}
+.ch-preview-picker select{min-width:0;flex:1;width:100%;height:38px;padding:var(--ch-space-2) var(--ch-space-3);border:1px solid var(--ch-border);border-radius:var(--ch-radius-button);background:var(--ch-surface);color:var(--ch-ink);font-family:var(--ch-font-text);font-size:var(--ch-size-body);line-height:var(--ch-line-body)}
+.ch-preview-actions{display:flex;align-items:center;gap:var(--ch-space-2)}
+.ch-preview-count{min-width:52px;text-align:center;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ch-preview-actions .ch-btn{padding:0;width:38px;height:38px;min-height:38px;flex:none}
+.ch-preview-actions .ch-preview-open{width:auto;padding-inline:var(--ch-space-3);gap:var(--ch-space-2)}
+.ch-preview-stage{position:relative;flex:1;min-height:0;display:flex;width:100%}
+.ch-preview-frame{display:block;flex:1;width:100%;height:100%;min-height:0;border:0;background:var(--ch-surface)}
+@media(max-width:900px){
+ .ch-preview-toolbar{gap:var(--ch-space-4)}
+ .ch-preview-open-label{display:none}
+ .ch-preview-actions .ch-preview-open{width:38px;padding:0}
+}
+@media(max-width:700px){
+ .ch-preview-toolbar{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand actions" "picker picker";gap:var(--ch-space-3);padding:var(--ch-space-3) var(--ch-space-4)}
+ .ch-preview-brand{grid-area:brand}
+ .ch-preview .ch-preview-brand img{width:124px}
+ .ch-preview-picker{grid-area:picker;max-width:none}
+ .ch-preview-picker select{height:44px}
+ .ch-preview-actions{grid-area:actions}
+ .ch-preview-count{display:none}
+ .ch-preview-actions .ch-btn{width:44px;height:44px;min-height:44px}
+}

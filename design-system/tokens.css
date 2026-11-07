@@ -1,0 +1,105 @@
+/* CHAMPIONLED · UI KIT
+   Source: Figma 8285:4, 1280px. Shared by every component.
+   Local preview values are defined here; section CSS reads only these roles.
+   Font files are static. Science Gothic Light is registered at CSS 600 to
+   reproduce KIT's role mapping; the outlines remain the real Light 300.
+   font-synthesis:none prevents artificial bolding. */
+@font-face{font-family:"Geist";src:url("fonts/Geist-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Geist";src:url("fonts/Geist-Semibold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Geist";src:url("fonts/Geist-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Science Gothic Light";src:url("fonts/Science-Gothic.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+
+.ch{
+  --ch-font-text:"Geist",Arial,sans-serif;
+  --ch-font-heading:"Science Gothic Light",Arial,sans-serif;
+  --ch-weight-text:400; --ch-weight-strong:600; --ch-weight-heading:600; --ch-weight-bold:700;
+
+  --ch-size-hero:28px; --ch-line-hero:34px;
+  --ch-size-section:34px; --ch-line-section:41px;
+  --ch-size-banner:30px; --ch-line-banner:36px;
+  --ch-size-feature:24px; --ch-line-feature:29px;
+  --ch-size-card:20px; --ch-line-card:24px;
+  --ch-size-lead:18px; --ch-line-lead:22px;
+  --ch-size-body:14px; --ch-line-body:20px;
+  --ch-size-caption:12px; --ch-line-caption:17px;
+  --ch-size-eyebrow:11px; --ch-line-eyebrow:16px;
+  --ch-size-price:21px; --ch-line-price:28px;
+  --ch-tracking-heading:0; --ch-tracking-eyebrow:.12em;
+
+  --ch-ink:var(--ys-color-token-text-primary,#1d2731);
+  --ch-muted:var(--ys-color-token-text-secondary,#717982);
+  --ch-accent:var(--ys-color-token-brand-primary,#df782b);
+  --ch-on-accent:var(--ys-color-token-brand-primary-contrast,#fff);
+  --ch-border:var(--ys-color-token-border-primary,#d3d6da);
+  --ch-surface:#fff; --ch-soft:#f2f4f7; --ch-image:#eff1f4;
+  --ch-dark:#1d2731; --ch-on-dark:#fff;
+  --ch-accent-light:#ffb467; --ch-accent-deep:#c05713; --ch-accent-soft:#fff1df;
+  --ch-gradient:linear-gradient(180deg,var(--ch-accent-light),var(--ch-accent-deep));
+  --ch-step-fill:#ffe9d5; --ch-step-ink:#f4814c;
+
+  --ch-space-1:var(--ys-spacing-50,4px);
+  --ch-space-2:var(--ys-spacing-100,8px);
+  --ch-space-3:var(--ys-spacing-150,12px);
+  --ch-space-4:var(--ys-spacing-200,16px);
+  --ch-space-5:var(--ys-spacing-250,20px);
+  --ch-space-6:var(--ys-spacing-300,24px);
+  --ch-space-7:var(--ys-spacing-400,32px);
+  --ch-space-8:var(--ys-spacing-500,40px);
+  --ch-space-9:var(--ys-spacing-600,48px);
+  --ch-space-10:var(--ys-spacing-800,64px);
+  --ch-space-11:var(--ys-spacing-1000,80px);
+  --ch-section-gap:var(--ch-space-11);
+  --ch-heading-gap:var(--ch-space-4);
+  --ch-heading-to-content:var(--ch-space-8);
+  --ch-grid-gap:var(--ch-space-5);
+  --ch-grid-gap-compact:calc(var(--ch-space-5) / 2);
+  --ch-card-padding:var(--ch-space-5);
+  --ch-radius-card:10px; --ch-radius-button:4px; --ch-radius-button-lg:5px;
+  --ch-container:1110px; --ch-heading-width:900px; --ch-copy-width:640px;
+  --ch-button-height:34px; --ch-button-lg-height:42px;
+
+  color:var(--ch-ink);background:var(--ch-surface);
+  font-family:var(--ch-font-text);font-size:var(--ch-size-body);
+  font-weight:var(--ch-weight-text);line-height:var(--ch-line-body);font-synthesis:none;
+}
+
+/* YANDEX KIT FONT SWITCH — READY TO ENABLE
+   Remove the comment around this rule when Geist_Science is already loaded
+   by the storefront. Do not redeclare or re-download the site's font faces.
+   KIT 400 -> Geist Regular 400
+   KIT 500 -> Geist SemiBold 600
+   KIT 600 -> Science Gothic Light 300
+   KIT 700 -> Geist Bold 700
+
+.ch{
+  --ch-font-text:"Geist_Science",Arial,sans-serif;
+  --ch-font-heading:"Geist_Science",Arial,sans-serif;
+  --ch-weight-text:400;
+  --ch-weight-strong:500;
+  --ch-weight-heading:600;
+  --ch-weight-bold:700;
+}
+*/
+
+/* Adaptive values are proposed for this UI KIT; the source frame is desktop. */
+@media(max-width:700px){.ch{
+  --ch-size-hero:24px;--ch-line-hero:29px;
+  --ch-size-section:26px;--ch-line-section:32px;
+  --ch-size-banner:24px;--ch-line-banner:29px;
+  --ch-size-feature:22px;--ch-line-feature:27px;
+  --ch-size-card:18px;--ch-line-card:23px;
+  --ch-size-lead:16px;--ch-line-lead:22px;
+  --ch-section-gap:var(--ch-space-9);
+  --ch-heading-to-content:var(--ch-space-6);
+  --ch-grid-gap:var(--ch-space-4);
+  --ch-card-padding:var(--ch-space-4);
+  --ch-button-height:44px;--ch-button-lg-height:48px;
+}}
+
+/* Compact phones: keep long Russian headings intact in narrow cards. */
+@media(max-width:380px){.ch{
+  --ch-size-hero:22px;--ch-line-hero:28px;
+  --ch-size-section:22px;--ch-line-section:28px;
+  --ch-size-banner:22px;--ch-line-banner:28px;
+  --ch-size-feature:20px;--ch-line-feature:25px;
+}}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChampionLED — просмотр страниц</title>
+  <link rel="stylesheet" href="design-system/tokens.css">
+  <link rel="stylesheet" href="design-system/components.css?v=a6c2b8377f6e">
+  <link rel="stylesheet" href="assets/preview/viewer.css?v=194d4ef1ebec">
+  <script src="assets/preview/viewer.js?v=eab805c926f7" defer></script>
+</head>
+<body class="ch ch-preview">
+  <header class="ch-preview-bar" aria-label="Переключение страниц">
+    <div class="ch-preview-toolbar">
+      <a class="ch-preview-brand" id="preview-home" href="index.html?page=home" aria-label="Главная страница ChampionLED">
+        <img src="assets/brand/championled.svg" alt="ChampionLED" width="187" height="39">
+      </a>
+      <label class="ch-preview-picker" for="preview-page">
+        <span class="ch-caption ch-muted">Страница</span>
+        <select id="preview-page" aria-label="Выбрать страницу">
+          <option value="home" data-file="home.html">Главная</option>
+<option value="about" data-file="about.html">О бренде</option>
+<option value="partners" data-file="partners.html">Партнёрам</option>
+<option value="contractors" data-file="contractors.html">Подрядчикам</option>
+<option value="designers" data-file="designers.html">Дизайнерам</option>
+<option value="buyers" data-file="buyers.html">Частным покупателям</option>
+<option value="business" data-file="business.html">Для бизнеса</option>
+<option value="cases" data-file="cases.html">Кейсы</option>
+<option value="case" data-file="case.html">Страница кейса</option>
+<option value="blog" data-file="blog.html">Блог</option>
+<option value="contacts" data-file="contacts.html">Контакты</option>
+<option value="catalog-series" data-file="catalog-series.html">Каталог: системы и линейки</option>
+<option value="catalog-categories" data-file="catalog-categories.html">Каталог: категории</option>
+<option value="form-partners" data-file="form-partners.html">Форма партнёров</option>
+<option value="form-contractors" data-file="form-contractors.html">Форма подрядчиков</option>
+<option value="form-designers" data-file="form-designers.html">Форма дизайнеров</option>
+<option value="form-buyers" data-file="form-buyers.html">Форма покупателей</option>
+<option value="form-business" data-file="form-business.html">Форма для бизнеса</option>
+        <option value="pobeda" data-file="pobeda.html">Победа — Про и Эко</option>
+        </select>
+      </label>
+      <nav class="ch-preview-actions" aria-label="Навигация по страницам">
+        <span class="ch-caption ch-muted ch-preview-count" id="preview-count" aria-live="polite">01 / 19</span>
+        <button class="ch-btn ch-btn--outline" id="preview-previous" type="button" aria-label="Предыдущая страница" title="Предыдущая страница" disabled><span aria-hidden="true">←</span></button>
+        <button class="ch-btn ch-btn--outline" id="preview-next" type="button" aria-label="Следующая страница" title="Следующая страница"><span aria-hidden="true">→</span></button>
+        <a class="ch-btn ch-btn--outline ch-preview-open" id="preview-open" href="pages/home.html" target="_blank" rel="noopener" aria-label="Открыть выбранную страницу отдельно" title="Открыть отдельно"><span class="ch-preview-open-label">Открыть отдельно</span><span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="ch-preview-stage" aria-label="Просмотр выбранной страницы">
+    <iframe class="ch-preview-frame" id="preview-frame" name="preview-frame" title="Главная — ChampionLED"></iframe>
+  </main>
+</body>
+</html>

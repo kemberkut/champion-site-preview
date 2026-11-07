@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Контакты | ChampionLED</title>
+  <link rel="stylesheet" href="../design-system/tokens.css">
+  <link rel="stylesheet" href="../design-system/components.css?v=a6c2b8377f6e">
+  <link rel="stylesheet" href="../design-system/pages.css?v=1b7addbd69e6">
+  <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="../design-system/contacts.css?v=6232a8d0b94b">
+  <script src="../assets/vendor/leaflet/leaflet.js" defer></script>
+  <script src="../assets/contacts/contacts.js?v=3b47b24d5bd1" defer></script>
+</head>
+<body class="ch ch-contacts" id="page-top">
+<main class="ch-site-main" id="top">
+  <div class="ch-page ch-container ch-contacts-page">
+    <nav class="ch-breadcrumbs" aria-label="Хлебные крошки">
+      <a class="ch-link" href="home.html" data-origin="contacts-0003">Главная</a>
+      <span aria-hidden="true" data-origin="contacts-0004">/</span>
+      <span aria-current="page" data-origin="contacts-0005">Контакты</span>
+    </nav>
+
+    <header class="ch-contacts-intro" id="intro">
+      <div class="ch-heading ch-heading--left">
+        <p class="ch-eyebrow">CHAMPIONLED · НА СВЯЗИ</p>
+        <h1 class="ch-title" data-origin="contacts-0009">Контакты</h1>
+      </div>
+      <p class="ch-body ch-muted">Свяжитесь с нами по вопросам продукции и покупки или приезжайте посмотреть светильники вживую. Выберите локацию — контакты и маршрут будут рядом.</p>
+    </header>
+
+    <section id="locations" aria-label="Наши локации" data-origin="contacts-0011">
+      <div class="ch-contacts-location-bar" data-origin="contacts-0012">
+        <div class="ch-tabs ch-contacts-city-switch" role="group" aria-label="Выберите город" data-origin="contacts-0013">
+          <button class="ch-tab ch-tab--active" type="button" data-city="moscow" aria-pressed="true" aria-controls="location-card contact-map visit" data-origin="contacts-0014">Москва</button>
+          <button class="ch-tab" type="button" data-city="spb" aria-pressed="false" aria-controls="location-card contact-map visit" data-origin="contacts-0015">Санкт-Петербург</button>
+        </div>
+        <p class="ch-caption ch-muted" data-origin="contacts-0016">Выберите город или нажмите на точку на карте</p>
+      </div>
+
+      <div class="ch-card ch-contacts-locations-grid">
+        <article class="ch-contacts-location-card" id="location-card" aria-live="polite" aria-atomic="true">
+          <div class="ch-contacts-location-heading">
+            <p class="ch-eyebrow" data-location-field="type" data-origin="contacts-0019">ГОЛОВНОЙ ОФИС</p>
+            <h2 class="ch-title ch-title--feature" data-location-field="city" data-origin="contacts-0020">Москва</h2>
+            <p class="ch-body ch-muted" data-location-field="name" data-origin="contacts-0021">«Красносельская»</p>
+          </div>
+          <div class="ch-contacts-field" data-origin="contacts-0022">
+            <span class="ch-caption ch-muted" data-origin="contacts-0023">Адрес</span>
+            <address class="ch-body" data-location-field="address" data-origin="contacts-0024">3-й Красносельский переулок,<br>д. 19, стр. 11</address>
+          </div>
+          <div class="ch-contacts-field" data-origin="contacts-0026">
+            <span class="ch-caption ch-muted" data-origin="contacts-0027">Режим работы</span>
+            <p class="ch-body" data-location-field="hours" data-origin="contacts-0028">По будням · 10:00–18:00</p>
+          </div>
+          <div class="ch-contacts-local-links" data-origin="contacts-0029">
+            <a class="ch-link" href="tel:+74951092300" data-location-phone data-origin="contacts-0030">+7 (495) 109-23-00</a>
+            <a class="ch-link" href="mailto:order@championled.ru" data-location-email data-origin="contacts-0031">order@championled.ru</a>
+          </div>
+          <a class="ch-btn ch-btn--dark ch-contacts-route" data-location-route href="https://yandex.ru/maps/213/moscow/?ll=37.656071%2C55.784859&amp;mode=whatshere&amp;whatshere%5Bpoint%5D=37.656071%2C55.784859&amp;whatshere%5Bzoom%5D=19&amp;z=17" target="_blank" rel="noopener" data-origin="contacts-0032">Открыть в Яндекс Картах <span aria-hidden="true">↗</span></a>
+          <p class="ch-caption ch-muted" data-origin="contacts-0034">Перед поездкой уточните, представлен ли интересующий вас светильник.</p>
+        </article>
+
+        <div class="ch-contacts-map-wrap" data-origin="contacts-0035">
+          <img class="ch-contacts-map-preview" id="map-preview" src="../assets/handoff-map-1440.png" alt="Москва — головной офис. Карта из интерактивного прототипа." data-origin="contacts-0037">
+          <div id="contact-map" role="region" aria-label="Интерактивная карта локаций ChampionLED" data-origin="contacts-0036"></div>
+          <button id="map-show-all" class="ch-contacts-map-all" type="button" data-origin="contacts-0038" disabled>Обе локации <span aria-hidden="true">↗</span></button>
+          <div id="map-fallback" class="ch-contacts-map-fallback" role="status" data-origin="contacts-0040" hidden>
+            <strong class="ch-strong ch-body" data-origin="contacts-0041">Карта не загрузилась</strong>
+            <p class="ch-caption ch-muted" data-origin="contacts-0042">Проверьте подключение к интернету или откройте выбранную локацию в Яндекс Картах.</p>
+            <a id="map-fallback-link" class="ch-link" data-location-route href="https://yandex.ru/maps/213/moscow/?ll=37.656071%2C55.784859&amp;mode=whatshere&amp;whatshere%5Bpoint%5D=37.656071%2C55.784859&amp;whatshere%5Bzoom%5D=19&amp;z=17" target="_blank" rel="noopener" data-origin="contacts-0043">Открыть карту <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ch-contacts-direct" id="contact-direct" data-origin="contacts-0044">
+      <div class="ch-contacts-direct-copy" data-origin="contacts-0045">
+        <div class="ch-heading ch-heading--left">
+          <p class="ch-eyebrow" data-origin="contacts-0046">ВОПРОСЫ ПО ПРОДУКЦИИ И ЗАКАЗУ</p>
+          <h2 class="ch-title ch-title--feature" data-origin="contacts-0047">Свяжитесь с нами</h2>
+        </div>
+        <p class="ch-body ch-muted" data-origin="contacts-0048">Остались вопросы о продукции, оплате или доставке? Свяжитесь с нами — поможем разобраться с характеристиками, наличием, получением заказа и гарантийным обращением.</p>
+      </div>
+      <div class="ch-contacts-direct-links" data-origin="contacts-0049">
+        <a class="ch-link" href="tel:+78003503085" data-origin="contacts-0050">
+          <span class="ch-contacts-direct-label"><span class="ch-caption ch-muted">Единый телефон</span><span class="ch-contacts-direct-value">8 (800) 350-30-85</span></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a class="ch-link" href="mailto:order@championled.ru" data-origin="contacts-0054">
+          <span class="ch-contacts-direct-label"><span class="ch-caption ch-muted">Электронная почта</span><span class="ch-contacts-direct-value">order@championled.ru</span></span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="ch-contacts-visit" id="visit" data-origin="contacts-0058">
+      <div class="ch-contacts-visit-copy">
+        <div class="ch-heading ch-heading--left">
+          <p class="ch-eyebrow" data-origin="contacts-0060">ЗНАКОМСТВО С ПРОДУКТОМ</p>
+          <h2 class="ch-title ch-title--feature" data-origin="contacts-0061">Посмотрите<br>свет вживую</h2>
+        </div>
+        <p class="ch-body ch-muted" data-origin="contacts-0063">Фотография помогает познакомиться с моделью. При встрече можно рассмотреть конструкцию и отделку, оценить размеры и работу света.</p>
+        <p class="ch-body ch-muted" data-origin="contacts-0064">Позвоните перед визитом: уточним, какие образцы доступны в выбранной локации.</p>
+        <a class="ch-link" id="visit-call" href="tel:+74951092300" data-origin="contacts-0065">Уточнить перед визитом <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="ch-contacts-photo">
+        <img id="location-photo" src="../assets/contacts/moscow.webp" alt="Головной офис — Москва. Фото с действующего сайта ChampionLED" loading="lazy" decoding="async" data-origin="contacts-0067">
+        <figcaption class="ch-caption" data-origin="contacts-0069"><span id="photo-city">Москва</span><span id="photo-location">«Красносельская»</span></figcaption>
+      </figure>
+    </section>
+
+    <aside class="ch-band ch-contacts-project" id="contact-project" data-origin="contacts-0072">
+      <div class="ch-flow" data-origin="contacts-0073">
+        <h3 class="ch-body ch-strong" data-origin="contacts-0074">Нужны подбор, расчёт или монтаж?</h3>
+        <p class="ch-caption ch-muted" data-origin="contacts-0075">Задачей освещения вашего объекта занимается команда LEDMONSTER.</p>
+      </div>
+      <a class="ch-link" href="home.html#project" data-origin="contacts-0076">Обсудить задачу <span aria-hidden="true">↗</span></a>
+    </aside>
+
+    <div class="ch-actions ch-contacts-bottom-links" data-origin="contacts-0078">
+      <a class="ch-link" href="https://championled.ru/details" target="_blank" rel="noopener" data-origin="contacts-0079">Реквизиты компании <span aria-hidden="true">↗</span></a>
+      <a class="ch-link" href="home.html#faq" data-origin="contacts-0081">Вопросы о покупке и гарантии <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</main>
+<script src="../assets/preview/page-bridge.js?v=b9fd082ebc0c" data-preview-bridge defer></script>
+</body>
+</html>

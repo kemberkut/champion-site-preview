@@ -1,0 +1,46 @@
+/* Single case: UI-KIT cards, media and page assembly. */
+.ch-case-detail [hidden]{display:none!important}
+.ch-case-detail .ch-case-detail-facts{align-items:stretch}
+.ch-case-detail .ch-case-detail-fact{background:var(--ch-soft);border-color:transparent}
+.ch-case-detail .ch-case-detail-fact .ch-card-body{gap:var(--ch-space-3)}
+.ch-case-detail .ch-case-detail-stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--ch-grid-gap)}
+.ch-case-detail .ch-case-detail-story-head{display:grid;grid-template-columns:var(--ch-space-7) minmax(0,1fr);align-items:start;gap:var(--ch-space-4);width:100%}
+.ch-case-detail .ch-case-detail-story-head>.ch-eyebrow{padding-top:4px;letter-spacing:0;font-size:var(--ch-size-body)}
+.ch-case-detail .ch-case-detail-story .ch-card-body{gap:var(--ch-space-5)}
+.ch-case-detail .ch-case-detail-tags{display:flex;flex-wrap:wrap;gap:var(--ch-space-2);margin-top:auto}
+.ch-case-detail .ch-case-detail-equipment{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--ch-grid-gap)}
+.ch-case-detail .ch-case-detail-equipment[data-count="1"]{grid-template-columns:1fr}
+.ch-case-detail .ch-case-detail-equipment-card .ch-card-body{align-items:stretch}
+.ch-case-detail .ch-case-detail-equipment-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--ch-space-3)}
+.ch-case-detail .ch-case-detail-equipment-field{display:flex;flex-direction:column;gap:var(--ch-space-2);background:var(--ch-soft);padding:var(--ch-space-4);border-radius:var(--ch-radius-button);min-width:0}
+.ch-case-detail .ch-case-detail-equipment-field>.ch-caption:first-child{color:var(--ch-muted)}
+.ch-case-detail .ch-case-detail-equipment-card .ch-cases-card-footer{margin-top:auto}
+.ch-case-detail .ch-case-detail-gallery{display:block;position:relative}
+.ch-case-detail .ch-case-detail-gallery-stage{position:relative;aspect-ratio:16/9;background:var(--ch-image);overflow:hidden}
+.ch-case-detail .ch-case-detail-gallery-frame{display:none;position:absolute;inset:0;align-items:center;justify-content:center;margin:0}
+.ch-case-detail .ch-case-detail-gallery-frame>img{width:100%;height:100%!important;object-fit:contain;border-radius:0}
+.ch-case-detail .ch-case-detail-gallery-frame>.ch-placeholder{width:100%;height:100%;display:flex;flex-direction:column;gap:var(--ch-space-2);padding:var(--ch-space-6)}
+.ch-case-detail .ch-case-detail-gallery-caption{position:absolute;right:var(--ch-space-4);bottom:var(--ch-space-4);background:var(--ch-surface)}
+.ch-case-detail .ch-case-detail-thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--ch-space-3);padding:var(--ch-space-4);border-top:1px solid var(--ch-border)}
+.ch-case-detail .ch-case-detail-thumb{display:flex;flex-direction:column;gap:var(--ch-space-2);padding:var(--ch-space-1);border:1px solid var(--ch-border);border-radius:var(--ch-radius-button);text-align:center;cursor:pointer;min-width:0;background:var(--ch-surface)}
+.ch-case-detail .ch-case-detail-thumb-visual{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1.6;background:var(--ch-image);overflow:hidden}
+.ch-case-detail .ch-case-detail-thumb-visual>img{width:100%;height:100%!important;object-fit:cover}
+.ch-case-detail .ch-case-detail-thumb-caption{font-size:var(--ch-size-caption);line-height:var(--ch-line-caption);padding-bottom:var(--ch-space-1)}
+.ch-case-detail #case-photo-1:checked~.ch-case-detail-gallery-stage [data-media-index="1"],.ch-case-detail #case-photo-2:checked~.ch-case-detail-gallery-stage [data-media-index="2"],.ch-case-detail #case-photo-3:checked~.ch-case-detail-gallery-stage [data-media-index="3"],.ch-case-detail #case-photo-4:checked~.ch-case-detail-gallery-stage [data-media-index="4"],.ch-case-detail #case-photo-5:checked~.ch-case-detail-gallery-stage [data-media-index="5"],.ch-case-detail #case-photo-6:checked~.ch-case-detail-gallery-stage [data-media-index="6"]{display:flex}
+.ch-case-detail #case-photo-1:checked~.ch-case-detail-thumbs [for="case-photo-1"],.ch-case-detail #case-photo-2:checked~.ch-case-detail-thumbs [for="case-photo-2"],.ch-case-detail #case-photo-3:checked~.ch-case-detail-thumbs [for="case-photo-3"],.ch-case-detail #case-photo-4:checked~.ch-case-detail-thumbs [for="case-photo-4"],.ch-case-detail #case-photo-5:checked~.ch-case-detail-thumbs [for="case-photo-5"],.ch-case-detail #case-photo-6:checked~.ch-case-detail-thumbs [for="case-photo-6"]{border-color:var(--ch-accent);box-shadow:inset 0 0 0 1px var(--ch-accent)}
+.ch-case-detail #case-photo-1:focus-visible~.ch-case-detail-thumbs [for="case-photo-1"],.ch-case-detail #case-photo-2:focus-visible~.ch-case-detail-thumbs [for="case-photo-2"],.ch-case-detail #case-photo-3:focus-visible~.ch-case-detail-thumbs [for="case-photo-3"],.ch-case-detail #case-photo-4:focus-visible~.ch-case-detail-thumbs [for="case-photo-4"],.ch-case-detail #case-photo-5:focus-visible~.ch-case-detail-thumbs [for="case-photo-5"],.ch-case-detail #case-photo-6:focus-visible~.ch-case-detail-thumbs [for="case-photo-6"]{outline:3px solid var(--ch-accent);outline-offset:2px}
+.ch-case-detail .ch-case-detail-catalog .ch-actions{flex:none}
+.ch-case-detail .ch-case-detail-catalog .ch-btn{white-space:nowrap}
+.ch-case-detail .ch-case-detail-related-actions{margin-top:var(--ch-heading-to-content)}
+@media(max-width:1000px){.ch-case-detail .ch-case-detail-related{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+ .ch-case-detail .ch-case-detail-facts,.ch-case-detail .ch-case-detail-stories,.ch-case-detail .ch-case-detail-equipment,.ch-case-detail .ch-case-detail-related{grid-template-columns:1fr}
+ .ch-case-detail .ch-case-detail-equipment-fields{grid-template-columns:1fr}
+ .ch-case-detail .ch-case-detail-gallery-stage{aspect-ratio:4/3}
+ .ch-case-detail .ch-case-detail-thumbs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:96px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:var(--ch-space-3);gap:var(--ch-space-2)}
+ .ch-case-detail .ch-case-detail-thumb{scroll-snap-align:start}
+ .ch-case-detail .ch-case-detail-story-head{gap:var(--ch-space-3)}
+ .ch-case-detail .ch-case-detail-gallery-caption{right:var(--ch-space-2);bottom:var(--ch-space-2)}
+}
+
+.ch-case-detail .ch-case-detail-equipment-card .ch-cases-card-footer{display:flex;flex-direction:column;gap:var(--ch-space-2)}
