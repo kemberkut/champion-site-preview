@@ -176,3 +176,6 @@ body.pb-scheme-dialog-open,body.pb-request-dialog-open{overflow:hidden}
 .pb-application-card.ch-dark .pb-application-description{color:var(--ch-on-dark)}
 @media(max-width:1000px){.pb-application-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.pb-application-copy{padding:var(--ch-space-4);gap:var(--ch-space-3)}}
+
+/* The edition owns the complete shop panel: categories, products and links. */
+.pb-shop-panel>#shopCompatibility{margin:0 0 var(--ch-space-5)}

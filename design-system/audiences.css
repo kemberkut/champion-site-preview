@@ -25,3 +25,7 @@
  .ch-audience-projects>.ch-heading>.ch-title{max-width:100%}
  .ch-audience-projects .ch-audience-project-grid{grid-template-columns:1fr}
 }
+
+/* Shared closing copy and cooperation navigation across all audience pages. */
+.ch-audience-centered{align-items:center;text-align:center}
+.ch-audience-centered>.ch-tabs{width:100%;justify-content:center}

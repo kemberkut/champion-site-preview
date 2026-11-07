@@ -1,1 +1,35 @@
-/* Layout and styling: ../design-system/tokens.css, components.css, pages.css. */
+/* Blog assembly: UI-KIT cards, type, spacing, colors and outer clipping. */
+.ch-section-body.ch-blog-featured{
+  display:grid;
+  grid-template-columns:minmax(0,2fr) minmax(0,1fr);
+  gap:var(--ch-grid-gap);
+}
+.ch-blog-feature{
+  display:grid;
+  grid-template-columns:minmax(0,2fr) minmax(0,3fr);
+  background:var(--ch-soft);
+}
+.ch-blog-feature-copy{justify-content:flex-start}
+.ch-blog-feature-media{
+  position:relative;
+  height:100%;
+  object-fit:contain;
+  background:var(--ch-soft);
+}
+.ch-blog-feature-media>.ch-media-image{position:absolute;inset:0}
+.ch-blog-feature-side{
+  display:grid;
+  grid-template-rows:repeat(2,minmax(0,1fr));
+  gap:var(--ch-grid-gap);
+}
+@media(max-width:1100px){
+  .ch-section-body.ch-blog-featured{grid-template-columns:1fr}
+  .ch-blog-feature-side{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:auto;
+  }
+}
+@media(max-width:700px){
+  .ch-blog-feature,.ch-blog-feature-side{grid-template-columns:1fr}
+  .ch-blog-feature-media{height:auto;aspect-ratio:2}
+}
